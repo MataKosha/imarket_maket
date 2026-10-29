@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMarket — Магазин оригинальной техники Apple в Астане</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            black: '#000000',
+                            card: '#0c0c0e',
+                            border: 'rgba(255, 255, 255, 0.08)',
+                            blue: '#0071e3',
+                            blueHover: '#0077ed',
+                            kaspi: '#f14635',
+                            grayText: '#86868b',
+                            lightText: '#f5f5f7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'SF Pro Text', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+            background-color: #000000;
+            color: #f5f5f7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .apple-glass {
+            background: rgba(18, 18, 20, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .apple-card {
+            background: #0c0c0e;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .apple-card:hover {
+            border-color: rgba(255, 255, 255, 0.18);
+            transform: translateY(-2px);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .subtle-grid {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="bg-black text-apple-lightText selection:bg-apple-blue selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-zinc-900 via-zinc-800 to-zinc-900 border-b border-white/10 text-xs py-2.5 px-4 text-center font-medium text-zinc-300 flex justify-center items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 font-semibold text-[11px]">
+            <i data-lucide="star" class="w-3 h-3 fill-amber-400 text-amber-400"></i> 5.0 (463+ отзыва в 2GIS)
+        </span>
+        <span class="hidden sm:inline">Самые низкие цены в Астане • Гарантия 1 год • Рассрочка 0-0-12 / 0-0-24</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 apple-glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand Identity -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-8 h-8 rounded-lg bg-white text-black flex items-center justify-center font-bold text-lg tracking-tighter group-hover:bg-apple-blue group-hover:text-white transition-colors">
+                    iM
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-base font-bold tracking-tight text-white leading-none">iMarket</span>
+                    <span class="text-[10px] font-medium tracking-widest text-apple-grayText uppercase mt-0.5">Astana • Store</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-wide">
+                <a href="#catalog" class="text-zinc-400 hover:text-white transition-colors">Каталог</a>
+                <a href="#kaspi" class="text-zinc-400 hover:text-white transition-colors flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-apple-kaspi"></span> Рассрочка 0-0-12/24
+                </a>
+                <a href="#tradein" class="text-zinc-400 hover:text-white transition-colors">Trade-In</a>
+                <a href="#contacts" class="text-zinc-400 hover:text-white transition-colors">Контакты</a>
+            </nav>
+
+            <!-- Quick Contacts CTA -->
+            <div class="flex items-center gap-3">
+                <a href="tel:+77087030101" class="hidden sm:flex items-center gap-2 text-xs font-semibold text-zinc-300 hover:text-white transition-colors pr-2">
+                    <i data-lucide="phone" class="w-3.5 h-3.5 text-apple-blue"></i>
+                    +7 (708) 703-0101
+                </a>
+                <a href="https://wa.me/77087030101" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-all flex items-center gap-1.5 shadow-sm">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Showcase Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden subtle-grid">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-zinc-300 text-xs font-medium">
+                        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                        Оригинальная техника Apple • Официальная гарантия 1 год
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+                        Магазин телефонов <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-zinc-500">и аксессуаров iMarket</span>
+                    </h1>
+
+                    <p class="text-apple-grayText text-base sm:text-lg max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Самые низкие цены в Астане. В наличии актуальные модели iPhone, iPad и Apple Watch. Покупка за наличный расчет и в удобную рассрочку 0-0-12 / 0-0-24.
+                    </p>
+
+                    <!-- Key Store Badges -->
+                    <div class="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-xl mx-auto lg:mx-0">
+                        <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/5 text-center">
+                            <span class="text-base font-bold text-amber-400 flex items-center justify-center gap-1">
+                                5.0 <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+                            </span>
+                            <span class="text-[11px] text-apple-grayText">463+ отзывов</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/5 text-center">
+                            <span class="text-base font-bold text-white block">1 Год</span>
+                            <span class="text-[11px] text-apple-grayText">Гарантия</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/5 text-center">
+                            <span class="text-base font-bold text-red-500 block">0-0-24</span>
+                            <span class="text-[11px] text-apple-grayText">Рассрочка</span>
+                        </div>
+                        <div class="p-3 rounded-xl bg-zinc-900/80 border border-white/5 text-center">
+                            <span class="text-base font-bold text-white block">2 часа</span>
+                            <span class="text-[11px] text-apple-grayText">Доставка по Астане</span>
+                        </div>
+                    </div>
+
+                    <!-- Call To Action -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
+                        <a href="#catalog" class="w-full sm:w-auto text-center bg-white text-black hover:bg-zinc-200 font-semibold px-7 py-3.5 rounded-xl transition-all text-sm">
+                            Смотреть каталог
+                        </a>
+                        <a href="https://wa.me/77087030101" target="_blank" class="w-full sm:w-auto text-center bg-zinc-900 hover:bg-zinc-800 text-white font-medium px-7 py-3.5 rounded-xl transition-all border border-white/10 text-sm flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                            Написать в WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Featured Hero Device Card -->
+                <div class="lg:col-span-5">
+                    <div class="apple-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-[11px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-md bg-apple-blue/10 text-apple-blue border border-apple-blue/20">Хит продаж</span>
+                            <span class="text-xs text-emerald-400 font-medium flex items-center gap-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> В наличии в магазине
+                            </span>
+                        </div>
+
+                        <div class="py-6 text-center">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=512&hei=512&fmt=png-alpha" 
+                                 alt="iPhone 15 Pro Max" 
+                                 class="h-64 object-contain mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500">
+                        </div>
+
+                        <div class="space-y-4 pt-4 border-t border-white/10">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">iPhone 15 Pro Max</h3>
+                                <p class="text-xs text-apple-grayText mt-0.5">Natural Titanium • 256 GB • Новый</p>
+                            </div>
+
+                            <div class="flex items-baseline justify-between">
+                                <div>
+                                    <span class="text-2xl font-extrabold text-white">585 000 ₸</span>
+                                    <span class="text-xs text-apple-grayText block">Или от 24 375 ₸/мес в рассрочку</span>
+                                </div>
+                                <button onclick="quickOrder('iPhone 15 Pro Max 256GB', '585 000 ₸')" class="bg-apple-blue hover:bg-apple-blueHover text-white px-5 py-2.5 rounded-xl font-semibold text-xs transition-colors flex items-center gap-1.5">
+                                    <i data-lucide="shopping-bag" class="w-4 h-4"></i> Заказать
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Catalog Section -->
+    <section id="catalog" class="py-20 border-t border-white/10 bg-zinc-950/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Каталог iMarket</h2>
+                    <p class="text-xs sm:text-sm text-apple-grayText mt-1">Оригинальные телефоны с гарантией 1 год. Выберите модель и память:</p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+                    <button onclick="filterCat('all', this)" class="cat-tab bg-white text-black px-4 py-2 rounded-xl text-xs font-semibold transition-all whitespace-nowrap">Все модели</button>
+                    <button onclick="filterCat('pro', this)" class="cat-tab bg-zinc-900 text-zinc-400 hover:text-white border border-white/10 px-4 py-2 rounded-xl text-xs font-semibold transition-all whitespace-nowrap">Pro Series</button>
+                    <button onclick="filterCat('base', this)" class="cat-tab bg-zinc-900 text-zinc-400 hover:text-white border border-white/10 px-4 py-2 rounded-xl text-xs font-semibold transition-all whitespace-nowrap">iPhone 15 / 13</button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Product 1: iPhone 15 Pro Max -->
+                <div class="apple-card rounded-2xl p-5 flex flex-col justify-between product-item" data-category="pro">
+                    <div>
+                        <div class="bg-zinc-900/60 rounded-xl p-4 mb-4 flex items-center justify-center h-48 border border-white/5">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=512&hei=512&fmt=png-alpha" 
+                                 alt="iPhone 15 Pro Max" class="h-40 object-contain hover:scale-105 transition-transform">
+                        </div>
+                        
+                        <h3 class="text-lg font-bold text-white">iPhone 15 Pro Max</h3>
+                        <p class="text-xs text-apple-grayText mt-0.5">Чип A17 Pro, Тройная камера 48 МП</p>
+
+                        <!-- Storage Buttons -->
+                        <div class="mt-4">
+                            <span class="text-[10px] uppercase tracking-wider text-apple-grayText font-semibold block mb-1.5">Объем памяти</span>
+                            <div class="grid grid-cols-3 gap-1">
+                                <button onclick="setProductPrice('p1', '585 000 ₸', this)" class="store-btn active border border-apple-blue bg-apple-blue/20 text-white text-xs py-1 rounded-md font-medium">256GB</button>
+                                <button onclick="setProductPrice('p1', '685 000 ₸', this)" class="store-btn border border-white/10 bg-zinc-900 text-zinc-400 text-xs py-1 rounded-md font-medium hover:border-white/20">512GB</button>
+                                <button onclick="setProductPrice('p1', '775 000 ₸', this)" class="store-btn border border-white/10 bg-zinc-900 text-zinc-400 text-xs py-1 rounded-md font-medium hover:border-white/20">1TB</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <div class="flex justify-between items-baseline mb-3">
+                            <span class="text-xs text-apple-grayText">Цена:</span>
+                            <span class="text-lg font-bold text-white" id="price-p1">585 000 ₸</span>
+                        </div>
+                        <button onclick="quickOrder('iPhone 15 Pro Max', document.getElementById('price-p1').innerText)" class="w-full py-2.5 bg-white hover:bg-zinc-200 text-black font-semibold rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5">
+                            <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Заказать в 1 клик
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2: iPhone 15 Pro -->
+                <div class="apple-card rounded-2xl p-5 flex flex-col justify-between product-item" data-category="pro">
+                    <div>
+                        <div class="bg-zinc-900/60 rounded-xl p-4 mb-4 flex items-center justify-center h-48 border border-white/5">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-blacktitanium?wid=512&hei=512&fmt=png-alpha" 
+                                 alt="iPhone 15 Pro" class="h-40 object-contain hover:scale-105 transition-transform">
+                        </div>
+                        
+                        <h3 class="text-lg font-bold text-white">iPhone 15 Pro</h3>
+                        <p class="text-xs text-apple-grayText mt-0.5">Дисплей 120 Гц, Титановый корпус</p>
+
+                        <!-- Storage Buttons -->
+                        <div class="mt-4">
+                            <span class="text-[10px] uppercase tracking-wider text-apple-grayText font-semibold block mb-1.5">Объем памяти</span>
+                            <div class="grid grid-cols-3 gap-1">
+                                <button onclick="setProductPrice('p2', '465 000 ₸', this)" class="store-btn active border border-apple-blue bg-apple-blue/20 text-white text-xs py-1 rounded-md font-medium">128GB</button>
+                                <button onclick="setProductPrice('p2', '515 000 ₸', this)" class="store-btn border border-white/10 bg-zinc-900 text-zinc-400 text-xs py-1 rounded-md font-medium hover:border-white/20">256GB</button>
+                                <button onclick="setProductPrice('p2', '610 000 ₸', this)" class="store-btn border border-white/10 bg-zinc-900 text-zinc-400 text-xs py-1 rounded-md font-medium hover:border-white/20">512GB</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <div class="flex justify-between items-baseline mb-3">
+                            <span class="text-xs text-apple-grayText">Цена:</span>
+                            <span class="text-lg font-bold text-white" id="price-p2">465 000 ₸</span>
+                        </div>
+                        <button onclick="quickOrder('iPhone 15 Pro', document.getElementById('price-p2').innerText)" class="w-full py-2.5 bg-white hover:bg-zinc-200 text-black font-semibold rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5">
+                            <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Заказать в 1 клик
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3: iPhone 15 -->
+                <div class="apple-card rounded-2xl p-5 flex flex-col justify-between product-item" data-category="base">
+                    <div>
+                        <div class="bg-zinc-900/60 rounded-xl p-4 mb-4 flex items-center justify-center h-48 border border-white/5">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black?wid=512&hei=512&fmt=png-alpha" 
+                                 alt="iPhone 15" class="h-40 object-contain hover:scale-105 transition-transform">
+                        </div>
+                        
+                        <h3 class="text-lg font-bold text-white">iPhone 15</h3>
+                        <p class="text-xs text-apple-grayText mt-0.5">Dynamic Island, USB-C, 48 МП</p>
+
+                        <!-- Storage Buttons -->
+                        <div class="mt-4">
+                            <span class="text-[10px] uppercase tracking-wider text-apple-grayText font-semibold block mb-1.5">Объем памяти</span>
+                            <div class="grid grid-cols-2 gap-1">
+                                <button onclick="setProductPrice('p3', '365 000 ₸', this)" class="store-btn active border border-apple-blue bg-apple-blue/20 text-white text-xs py-1 rounded-md font-medium">128GB</button>
+                                <button onclick="setProductPrice('p3', '425 000 ₸', this)" class="store-btn border border-white/10 bg-zinc-900 text-zinc-400 text-xs py-1 rounded-md font-medium hover:border-white/20">256GB</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <div class="flex justify-between items-baseline mb-3">
+                            <span class="text-xs text-apple-grayText">Цена:</span>
+                            <span class="text-lg font-bold text-white" id="price-p3">365 000 ₸</span>
+                        </div>
+                        <button onclick="quickOrder('iPhone 15', document.getElementById('price-p3').innerText)" class="w-full py-2.5 bg-white hover:bg-zinc-200 text-black font-semibold rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5">
+                            <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Заказать в 1 клик
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4: iPhone 13 -->
+                <div class="apple-card rounded-2xl p-5 flex flex-col justify-between product-item" data-category="base">
+                    <div>
+                        <div class="bg-zinc-900/60 rounded-xl p-4 mb-4 flex items-center justify-center h-48 border border-white/5">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-select-202207-midnight?wid=512&hei=512&fmt=png-alpha" 
+                                 alt="iPhone 13" class="h-40 object-contain hover:scale-105 transition-transform">
+                        </div>
+                        
+                        <h3 class="text-lg font-bold text-white">iPhone 13</h3>
+                        <p class="text-xs text-apple-grayText mt-0.5">Бестселлер по лучшей цене</p>
+
+                        <!-- Storage Buttons -->
+                        <div class="mt-4">
+                            <span class="text-[10px] uppercase tracking-wider text-apple-grayText font-semibold block mb-1.5">Объем памяти</span>
+                            <div class="grid grid-cols-2 gap-1">
+                                <button onclick="setProductPrice('p4', '275 000 ₸', this)" class="store-btn active border border-apple-blue bg-apple-blue/20 text-white text-xs py-1 rounded-md font-medium">128GB</button>
+                                <button onclick="setProductPrice('p4', '325 000 ₸', this)" class="store-btn border border-white/10 bg-zinc-900 text-zinc-400 text-xs py-1 rounded-md font-medium hover:border-white/20">256GB</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-white/10">
+                        <div class="flex justify-between items-baseline mb-3">
+                            <span class="text-xs text-apple-grayText">Цена:</span>
+                            <span class="text-lg font-bold text-white" id="price-p4">275 000 ₸</span>
+                        </div>
+                        <button onclick="quickOrder('iPhone 13', document.getElementById('price-p4').innerText)" class="w-full py-2.5 bg-white hover:bg-zinc-200 text-black font-semibold rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5">
+                            <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Заказать в 1 клик
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Installment Calculator Section -->
+    <section id="kaspi" class="py-20 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="apple-card rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    
+                    <div class="lg:col-span-6 space-y-4">
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-red-500/10 border border-red-500/20 text-red-500 text-xs font-bold uppercase tracking-wider">
+                            Удобные финансовые программы
+                        </span>
+                        <h2 class="text-3xl font-bold text-white">Покупайте в рассрочку 0-0-12 / 0-0-24</h2>
+                        <p class="text-apple-grayText text-sm leading-relaxed">
+                            Оформляйте покупку за пару минут через Kaspi Pay, Kaspi Red или Freedom Credit. Без скрытых комиссии и переплат.
+                        </p>
+
+                        <div class="space-y-3 pt-2 text-xs text-zinc-300">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                                <span>Kaspi Red & Kaspi Pay (0-0-12 / 0-0-24)</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                                <span>Онлайн одобрение за 1 минуту</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Calculator -->
+                    <div class="lg:col-span-6 bg-zinc-900/90 rounded-2xl p-6 border border-white/10">
+                        <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+                            <i data-lucide="calculator" class="w-4 h-4 text-red-500"></i>
+                            Калькулятор ежемесячного платежа
+                        </h3>
+
+                        <div class="space-y-4">
+                            <div>
+                                <label class="text-xs text-apple-grayText block mb-1">Сумма покупки (₸)</label>
+                                <input type="number" id="calcPrice" value="365000" oninput="updateInstallment()" 
+                                       class="w-full bg-black border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm font-semibold focus:outline-none focus:border-red-500">
+                            </div>
+
+                            <div>
+                                <label class="text-xs text-apple-grayText block mb-1">Срок рассрочки</label>
+                                <select id="calcMonths" onchange="updateInstallment()" 
+                                        class="w-full bg-black border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm font-semibold focus:outline-none focus:border-red-500">
+                                    <option value="3">3 месяца (Kaspi Red)</option>
+                                    <option value="6">6 месяцев</option>
+                                    <option value="12" selected>12 месяцев (0-0-12)</option>
+                                    <option value="24">24 месяца (0-0-24)</option>
+                                </select>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-center">
+                                <span class="text-xs text-apple-grayText block mb-1">Ваш платеж составит:</span>
+                                <span class="text-2xl font-black text-red-500" id="calcResult">30 417 ₸ / мес</span>
+                            </div>
+
+                            <button onclick="requestKaspiLink()" class="w-full py-3 bg-red-600 hover:bg-red-500 text-white font-semibold rounded-xl text-xs transition-colors">
+                                Запросить расчет в WhatsApp
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trade-In Estimator Section -->
+    <section id="tradein" class="py-20 border-t border-white/10 bg-zinc-950/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center mb-10">
+                <span class="text-xs font-bold text-apple-blue uppercase tracking-wider">Программа Trade-In</span>
+                <h2 class="text-3xl font-bold text-white mt-1">Обменяйте ваш старый iPhone на новый</h2>
+                <p class="text-xs sm:text-sm text-apple-grayText mt-1">Оценка вашего смартфона за 5 минут в нашем магазине на Бухар Жырау, 26</p>
+            </div>
+
+            <div class="max-w-xl mx-auto apple-card rounded-2xl p-6 border border-white/10">
+                <form onsubmit="handleTradeIn(event)" class="space-y-4">
+                    <div>
+                        <label class="text-xs text-apple-grayText block mb-1">Ваша текущая модель</label>
+                        <select id="tradeModel" class="w-full bg-zinc-900 border border-white/10 rounded-xl px-4 py-2.5 text-white text-xs focus:outline-none focus:border-apple-blue">
+                            <option value="iPhone 11 / 11 Pro">iPhone 11 / 11 Pro</option>
+                            <option value="iPhone 12 / 12 Pro">iPhone 12 / 12 Pro</option>
+                            <option value="iPhone 13 / 13 Pro">iPhone 13 / 13 Pro</option>
+                            <option value="iPhone 14 / 14 Pro">iPhone 14 / 14 Pro</option>
+                            <option value="Другая модель">Другая модель</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-apple-grayText block mb-1">Состояние и остаток аккумулятора (АКБ %)</label>
+                        <input type="text" id="tradeCondition" placeholder="Например: В идеале, АКБ 87%, без сколов" required
+                               class="w-full bg-zinc-900 border border-white/10 rounded-xl px-4 py-2.5 text-white text-xs focus:outline-none focus:border-apple-blue">
+                    </div>
+
+                    <button type="submit" class="w-full py-3 bg-apple-blue hover:bg-apple-blueHover text-white font-semibold rounded-xl text-xs transition-colors flex items-center justify-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i> Рассчитать стоимость обмена
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts & Store Location -->
+    <section id="contacts" class="py-16 border-t border-white/10 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs text-emerald-400 font-bold uppercase tracking-wider">Приходите в гости</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Магазин iMarket в Астане</h2>
+                    </div>
+                    
+                    <div class="space-y-4 text-xs text-zinc-300">
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900 border border-white/5">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-apple-blue mt-0.5 shrink-0"></i>
+                            <div>
+                                <span class="font-bold block text-white text-sm">Адрес:</span>
+                                <span>ул. Бухар Жырау, 26, Есиль район, г. Астана</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900 border border-white/5">
+                            <i data-lucide="clock" class="w-5 h-5 text-apple-blue mt-0.5 shrink-0"></i>
+                            <div>
+                                <span class="font-bold block text-white text-sm">Режим работы:</span>
+                                <span>Открыто ежедневно с 10:00 до 20:00</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-zinc-900 border border-white/5">
+                            <i data-lucide="phone" class="w-5 h-5 text-apple-blue mt-0.5 shrink-0"></i>
+                            <div>
+                                <span class="font-bold block text-white text-sm">Телефон / WhatsApp:</span>
+                                <span>+7 (708) 703-0101</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/77087030101" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i> Написать продавцу в WhatsApp
+                    </a>
+                </div>
+
+                <!-- Google Map Embed -->
+                <div class="lg:col-span-7 h-72 sm:h-80 rounded-2xl overflow-hidden border border-white/10">
+                    <iframe src="https://maps.google.com/maps?q=Bukhar-Zhyrau%20Street%2026%20Astana&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" height="100%" style="border:0; filter: grayscale(100%) invert(92%) contrast(120%);" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-6 text-center text-xs text-apple-grayText">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <span>© 2026 iMarket Astana. Оригинальная техника Apple.</span>
+            <span>г. Астана, ул. Бухар Жырау, 26</span>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        lucide.createIcons();
+
+        function setProductPrice(productId, price, btnElement) {
+            document.getElementById(`price-${productId}`).innerText = price;
+            
+            const parent = btnElement.parentElement;
+            parent.querySelectorAll('.store-btn').forEach(btn => {
+                btn.classList.remove('border-apple-blue', 'bg-apple-blue/20', 'text-white');
+                btn.classList.add('border-white/10', 'bg-zinc-900', 'text-zinc-400');
+            });
+
+            btnElement.classList.remove('border-white/10', 'bg-zinc-900', 'text-zinc-400');
+            btnElement.classList.add('border-apple-blue', 'bg-apple-blue/20', 'text-white');
+        }
+
+        function filterCat(category, btnElement) {
+            document.querySelectorAll('.cat-tab').forEach(btn => {
+                btn.classList.remove('bg-white', 'text-black');
+                btn.classList.add('bg-zinc-900', 'text-zinc-400');
+            });
+
+            btnElement.classList.remove('bg-zinc-900', 'text-zinc-400');
+            btnElement.classList.add('bg-white', 'text-black');
+
+            document.querySelectorAll('.product-item').forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function updateInstallment() {
+            const price = parseFloat(document.getElementById('calcPrice').value) || 0;
+            const months = parseInt(document.getElementById('calcMonths').value) || 12;
+            const monthly = Math.round(price / months);
+            document.getElementById('calcResult').innerText = monthly.toLocaleString('ru-RU') + ' ₸ / мес';
+        }
+
+        function quickOrder(product, price) {
+            const message = `Здравствуйте, iMarket! Хочу заказать со сайта:%0A%0A📱 Модель: ${product}%0A💰 Цена: ${price}%0A📍 Адрес магазина: Бухар Жырау, 26`;
+            window.open(`https://wa.me/77087030101?text=${message}`, '_blank');
+        }
+
+        function requestKaspiLink() {
+            const price = document.getElementById('calcPrice').value;
+            const message = `Здравствуйте! Хочу рассчитать рассрочку на сумму ${price} ₸ в магазине iMarket (Бухар Жырау 26).`;
+            window.open(`https://wa.me/77087030101?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        function handleTradeIn(e) {
+            e.preventDefault();
+            const model = document.getElementById('tradeModel').value;
+            const condition = document.getElementById('tradeCondition').value;
+            const message = `Здравствуйте! Хочу оценить старый смартфон по Trade-In:%0A%0A📱 Модель: ${model}%0A⚙️ Состояние: ${condition}`;
+            window.open(`https://wa.me/77087030101?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
