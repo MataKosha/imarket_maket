@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://store.storeimages.cdn-apple.com https://i.pinimg.com; connect-src https://docs.google.com https://*.googleusercontent.com; frame-src https://maps.google.com https://www.google.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>iMarket — Premium reseller Apple · Астана, Орал, Атырау</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--card:#101012;--card2:#1a1a1d;--line:rgba(255,255,255,.1);--mut:#8e8e93;--txt:#f5f5f7;--blue:#0a84ff;--wa:#25d366;--red:#ff453a;--r:20px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:110px;-webkit-text-size-adjust:100%}
+body{font-family:Montserrat,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.4;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+input,select{font-size:16px;width:100%;height:50px;background:#000;border:1px solid var(--line);border-radius:14px;padding:0 14px;outline:none}
+input:focus,select:focus{border-color:var(--blue)}
+button{cursor:pointer;border:0;background:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+.sec{padding:40px 0;border-top:1px solid var(--line)}
+.alt{background:#09090a}
+h1{font-size:clamp(30px,8.4vw,60px);line-height:1.07;letter-spacing:-.02em;font-weight:800}
+h2{font-size:clamp(24px,6vw,36px);letter-spacing:-.01em;font-weight:800}
+.mut{color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r)}
+.btn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:16px;font-weight:700;font-size:15px;text-align:center;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.b-w{background:#fff;color:#000}.b-d{background:var(--card2);border:1px solid var(--line)}
+.b-wa{background:var(--wa);color:#000}.b-b{background:var(--blue);color:#fff}.b-r{background:#e5352b;color:#fff}
+
+/* top + header */
+.top{font-size:12px;color:#c7c7cc;background:#0b0b0c;border-bottom:1px solid var(--line);text-align:center;padding:8px 12px;padding-top:calc(8px + env(safe-area-inset-top,0px))}
+.top b{color:#ffb340}
+header{position:sticky;top:0;z-index:40;background:rgba(14,14,16,.82);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.bar{height:58px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo i{font-style:normal;width:36px;height:36px;border-radius:11px;background:#fff;color:#000;display:grid;place-items:center;font-weight:800}
+.logo b{display:block;font-size:16px;line-height:1}.logo span{font-size:11px;color:var(--mut)}
+.nav{display:none;gap:28px;font-size:14px;color:#a1a1a6}.nav a:hover{color:#fff}
+.hcall{display:flex;gap:8px;align-items:center}
+.ico{width:42px;height:42px;border-radius:50%;background:var(--card2);border:1px solid var(--line);display:grid;place-items:center;font-size:18px}
+.hwa{display:none;min-height:42px;padding:0 18px;border-radius:999px;font-size:14px}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:8px 0 10px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:#161618;color:#a1a1a6;font-weight:600;font-size:13px;display:inline-flex;align-items:center}
+.chip.on{background:#fff;color:#000;border-color:#fff}
+
+/* hero */
+.hero{padding:28px 0 36px;background:radial-gradient(70% 45% at 50% 0%,rgba(10,132,255,.22),transparent 70%)}
+.hgrid{display:grid;gap:28px}
+.pill{display:inline-flex;gap:8px;align-items:center;font-size:12px;color:#d1d1d6;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:999px;padding:7px 12px}
+.pill::before{content:"";width:8px;height:8px;border-radius:50%;background:#30d158}
+.hero h1{margin:16px 0 14px}
+.hero p.lead{font-size:16px;color:#a1a1a6;max-width:460px}
+.cta{display:grid;gap:10px;margin-top:22px;max-width:440px}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px;max-width:440px}
+.stat{padding:12px 14px}.stat b{font-size:18px;display:block}.stat span{font-size:12px;color:var(--mut)}
+.feat{padding:18px}
+.feat .row{display:flex;justify-content:space-between;align-items:center;font-size:12px}
+.tag{background:rgba(10,132,255,.16);color:var(--blue);font-weight:700;border-radius:999px;padding:5px 11px}
+.ok{color:#30d158}
+.feat img{height:min(56vw,260px);width:auto;margin:14px auto;object-fit:contain;filter:drop-shadow(0 18px 26px rgba(0,0,0,.6))}
+.feat h3{font-size:20px}.feat .sub{font-size:13px;color:var(--mut)}
+.frow{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap}
+.price{font-size:24px;font-weight:800}.inst{font-size:12px;color:var(--mut)}
+
+/* catalog */
+.head p{font-size:14px;color:var(--mut);margin-top:4px}
+.search{margin-top:16px}
+.filters{position:sticky;top:104px;z-index:30;margin:12px -16px 0;padding:10px 16px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;background:rgba(14,14,16,.85);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-block:1px solid rgba(255,255,255,.05)}
+.filters::-webkit-scrollbar{display:none}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}
+.p{padding:12px;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+.pimg{background:#18181a;border-radius:14px;height:138px;display:grid;place-items:center}
+.pimg img{height:112px;width:auto;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,0,0,.6))}
+.p h3{font-size:15px;margin-top:12px;line-height:1.2}.p .d{font-size:12px;color:var(--mut);margin-top:3px}
+.mems{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.mem{flex:1 1 calc(50% - 3px);min-height:40px;border-radius:12px;border:1px solid var(--line);background:var(--card2);color:#a1a1a6;font-size:12px;font-weight:600}
+.mem.on{background:rgba(10,132,255,.18);border-color:var(--blue);color:#fff}
+.pfoot{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.pfoot .pr{font-size:18px;font-weight:800}.pfoot .btn{margin-top:10px;min-height:46px;font-size:14px;width:100%}
+.empty{display:none;padding:22px;margin-top:16px;text-align:center}.empty .btn{margin-top:14px}
+
+/* installment */
+.two{display:grid;gap:22px}
+.red{display:inline-block;font-size:12px;font-weight:700;color:#ff6b61;background:rgba(255,69,58,.1);border:1px solid rgba(255,69,58,.25);border-radius:999px;padding:5px 12px;margin-bottom:10px}
+.two ul{list-style:none;margin-top:14px;font-size:14px;color:#d1d1d6;display:grid;gap:8px}
+.two li::before{content:"✓ ";color:#30d158}
+.calc{padding:18px}.calc label{display:block;font-size:13px;color:var(--mut);margin:14px 0 6px}.calc h3{font-size:16px}
+.mo{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.mo .mem{flex:none}
+.res{margin-top:16px;border-radius:16px;background:rgba(255,69,58,.1);border:1px solid rgba(255,69,58,.25);padding:14px;text-align:center}
+.res span{font-size:13px;color:#a1a1a6}.res b{display:block;font-size:30px;color:var(--red);font-weight:900}
+.calc .btn{margin-top:14px;width:100%}
+
+/* trade-in, faq, contacts */
+.narrow{width:min(620px,100% - 32px);margin-inline:auto}
+form.card{padding:18px;margin-top:20px;display:grid;gap:14px}
+form label{display:block;font-size:13px;color:var(--mut);margin-bottom:6px}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-weight:600;font-size:15px}
+summary::-webkit-details-marker{display:none}
+summary i{font-style:normal;font-size:24px;color:var(--blue);transition:transform .25s}
+details[open] summary i{transform:rotate(45deg)}
+details p{padding:0 0 16px;color:#a1a1a6;font-size:14px;line-height:1.55}
+.info{display:grid;gap:10px;margin-top:16px}
+.info .card{padding:14px 16px;display:flex;gap:12px;align-items:flex-start;font-size:14px;color:#a1a1a6}
+.info b{display:block;color:#fff;font-size:15px}.info em{font-style:normal;font-size:22px}
+.map{height:280px;border-radius:24px;overflow:hidden;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(1.2)}
+footer{border-top:1px solid var(--line);padding:22px 16px;text-align:center;font-size:12px;color:var(--mut)}
+
+/* bottom bar (phones) */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(14,14,16,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid var(--line)}
+.dock .btn{flex:1;min-height:50px;font-size:14px}.dock .btn:last-child{flex:1.4}
+
+/* very small phones */
+@media(max-width:340px){.grid{grid-template-columns:1fr}}
+/* large phones / small tablets */
+@media(min-width:600px){
+ .cta{grid-template-columns:1fr 1fr;max-width:520px}.stats{grid-template-columns:repeat(4,1fr);max-width:560px}
+ .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.hwa{display:flex}
+}
+/* tablets & desktop */
+@media(min-width:900px){
+ body{padding-bottom:0}.dock,.chips{display:none}.nav{display:flex}
+ .filters{top:58px}.sec{padding:72px 0}.hero{padding:64px 0 80px}
+ .hgrid{grid-template-columns:1.15fr .85fr;align-items:center;gap:48px}
+ .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .two{grid-template-columns:1fr 1fr;align-items:center;gap:48px}
+ .contacts{display:grid;grid-template-columns:5fr 7fr;gap:32px;align-items:stretch}.map{height:auto;min-height:340px}
+ html{scroll-padding-top:90px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.lang{display:flex;background:var(--card2);border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang button{min-height:36px;padding:0 12px;border-radius:999px;font-size:12px;font-weight:700;color:#a1a1a6}.lang button.on{background:#fff;color:#000}
+.brs{padding:18px}.brs h3{font-size:18px}.brs>p{font-size:13px;color:var(--mut);margin:2px 0 14px}
+.br{padding:14px 0;border-top:1px solid var(--line)}.br b{font-size:16px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.br small{font-size:11px;font-weight:700;color:#30d158;background:rgba(48,209,88,.12);border-radius:999px;padding:3px 9px}
+.br div{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}.br .btn{min-height:44px;font-size:13px}
+.btn.dis{opacity:.35;pointer-events:none}
+.ph{width:62px;height:116px;border-radius:16px;border:2px solid #3b3b3f;background:linear-gradient(160deg,#2c2c30,#0f0f10);position:relative;box-shadow:0 14px 22px rgba(0,0,0,.6)}
+.ph.pro{background:linear-gradient(160deg,#7a6552,#2b231d);border-color:#8a7560}
+.ph i{position:absolute;left:6px;width:13px;height:13px;border-radius:50%;background:#050505;border:2px solid #55555a}
+.ph i:nth-child(1){top:7px}.ph i:nth-child(2){top:24px}.ph i:nth-child(3){top:41px}
+.pb{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}.pb .btn{margin-top:0!important}
+.pfoot .pr.q{font-size:14px;color:#ffb340}
+.sel2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.tbl{margin-top:14px;overflow:hidden}.tr{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.tr:first-child{border-top:0}.tr>span{grid-column:1/-1;font-size:12px;color:var(--mut);padding:12px 14px 0;text-transform:uppercase;letter-spacing:.04em}
+.tr>b{padding:4px 14px 12px;font-size:16px;text-align:center;font-weight:600}.tr>b.win{color:#30d158}
+.tr>b+b{border-left:1px solid var(--line)}
+.ch{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.ch .ph{margin:0 auto}.ch>div{text-align:center;font-weight:700;padding:14px 8px;font-size:14px}
+dialog{margin:auto auto 0;width:min(560px,100%);max-height:90vh;overflow:auto;border:0;border-radius:24px 24px 0 0;background:#121214;color:#fff;padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}
+dialog::backdrop{background:rgba(0,0,0,.65)}
+.sp{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:14px}.sp span{color:var(--mut)}.sp b{text-align:right;font-weight:600}
+.tres{margin-top:4px;text-align:center;padding:14px;border-radius:16px;background:rgba(10,132,255,.1);border:1px solid rgba(10,132,255,.3)}
+.tres b{display:block;font-size:26px;color:var(--blue)}.tres small{font-size:12px;color:var(--mut)}
+
+.pimgx{height:112px;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,0,0,.55))}
+.ch .pimgx{height:150px;margin:0 auto}dialog .pimgx{height:190px}
+svg.ph,svg.ph.pro{width:68px;height:136px;border:0;background:none;box-shadow:none;border-radius:0;filter:drop-shadow(0 14px 18px rgba(0,0,0,.6))}
+@media(min-width:900px){dialog{margin:auto;border-radius:24px}.pb{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="top"><b>PREMIUM RESELLER</b> · since 2021 · <span data-i="top"></span></div>
+<header><div class="wrap">
+ <div class="bar">
+  <a href="#" class="logo"><i>iM</i><div><b>iMarket</b><span>Premium reseller</span></div></a>
+  <nav class="nav"><a href="#catalog" data-i="nCat"></a><a href="#compare" data-i="nCmp"></a><a href="#tradein" data-i="nTrade"></a><a href="#branches" data-i="nBr"></a><a href="#contacts" data-i="nCont"></a></nav>
+  <div class="hcall">
+   <div class="lang"><button data-lang="ru">RU</button><button data-lang="kk">ҚАЗ</button></div>
+   <a class="ico" href="tel:+77087030101" aria-label="Call">📞</a>
+  </div>
+ </div>
+ <div class="chips"><a class="chip" href="#branches" data-i="nBr"></a><a class="chip" href="#catalog" data-i="nCat"></a><a class="chip" href="#compare" data-i="nCmp"></a><a class="chip" href="#tradein" data-i="nTrade"></a><a class="chip" href="#contacts" data-i="nCont"></a></div>
+</div></header>
+
+<section class="hero"><div class="wrap hgrid">
+ <div>
+  <span class="pill" data-i="pill"></span>
+  <h1 data-i="h1"></h1>
+  <p class="lead" data-i="lead"></p>
+  <div class="cta"><a class="btn b-w" href="#catalog" data-i="btnCat"></a><a class="btn b-d" href="#compare" data-i="btnCmp"></a></div>
+  <div class="stats">
+   <div class="card stat"><b style="color:#ffb340">5.0 ★</b><span data-i="s1"></span></div>
+   <div class="card stat"><b data-i="s2v"></b><span data-i="s2"></span></div>
+   <div class="card stat"><b style="color:var(--red)">0-0-24</b><span data-i="s3"></span></div>
+   <div class="card stat"><b data-i="s4v"></b><span data-i="s4"></span></div>
+  </div>
+ </div>
+ <div class="card brs" id="branches"><h3 data-i="brT"></h3><p data-i="brS"></p><div id="brList"></div></div>
+</div></section>
+
+<section id="catalog" class="sec alt"><div class="wrap">
+ <h2 data-i="catT"></h2><p class="mut" style="font-size:14px;margin-top:4px" data-i="catS"></p>
+ <div class="search"><input id="q" type="search" inputmode="search" data-ph="search"></div>
+ <div class="filters" id="tabs"><button class="chip on" data-cat="all" data-i="fAll"></button><button class="chip" data-cat="base" data-i="fBase"></button><button class="chip" data-cat="pro" data-i="fPro"></button><button class="chip on" data-sim="0">SIM</button><button class="chip" data-sim="1">eSIM</button><button class="chip" id="sort" data-i="fSort"></button></div>
+ <div class="grid" id="grid"></div>
+ <div class="card empty" id="empty"><b data-i="empty"></b><p class="mut" style="font-size:14px;margin-top:4px" data-i="emptyS"></p><a class="btn b-wa" href="https://wa.me/77087030101" target="_blank" rel="noopener" data-i="ask"></a></div>
+</div></section>
+
+<section id="compare" class="sec"><div class="wrap">
+ <h2 data-i="cmpT"></h2><p class="mut" style="font-size:14px;margin-top:4px" data-i="cmpS"></p>
+ <div class="sel2"><select id="cA"></select><select id="cB"></select></div>
+ <div class="ch" id="cmpHead"></div>
+ <div class="card tbl" id="cmpTbl"></div>
+</div></section>
+
+<section id="kaspi" class="sec alt"><div class="wrap two">
+ <div><span class="red">0-0-12 · 0-0-24</span><h2 data-i="inT"></h2><p class="mut" style="margin-top:12px;font-size:15px">Kaspi Red · Kaspi Credit</p></div>
+ <div class="card calc">
+  <label data-i="inSum" for="calcPrice"></label><input id="calcPrice" type="number" inputmode="numeric" value="365000">
+  <label data-i="inTerm"></label>
+  <div class="mo" id="months"><button class="mem" data-m="3">3</button><button class="mem" data-m="6">6</button><button class="mem on" data-m="12">12</button><button class="mem" data-m="24">24</button></div>
+  <div class="res"><span data-i="inPay"></span><b id="calcResult"></b></div>
+  <button class="btn b-r" id="askInst" data-i="inBtn"></button>
+ </div>
+</div></section>
+
+<section id="tradein" class="sec"><div class="narrow">
+ <h2 style="text-align:center" data-i="trT"></h2><p class="mut" style="text-align:center;font-size:14px;margin-top:8px" data-i="trS"></p>
+ <form class="card" id="trForm">
+  <div><label data-i="trModel"></label><select id="trM"></select></div>
+  <div><label data-i="trBat"></label><select id="trB"><option value="1">90–100%</option><option value=".92">80–89%</option><option value=".8">&lt; 80%</option></select></div>
+  <div><label data-i="trCond"></label><select id="trC"></select></div>
+  <div class="tres"><small data-i="trRes"></small><b id="trOut"></b><small data-i="trNote"></small></div>
+  <button class="btn b-b" data-i="trBtn"></button>
+ </form>
+</div></section>
+
+<section id="contacts" class="sec alt"><div class="wrap contacts">
+ <div>
+  <h2 data-i="coT"></h2>
+  <div class="info">
+   <div class="card"><em>📍</em><div><b data-i="addr"></b><span data-i="addrV"></span></div></div>
+   <div class="card"><em>🕙</em><div><b data-i="hrs"></b><span data-i="hrsV"></span></div></div>
+   <a class="card" href="tel:+77087030101"><em>📞</em><div><b data-i="phone"></b><span style="color:var(--blue)">+7 (708) 703-0101</span></div></a>
+   <a class="btn b-w" href="https://www.google.com/maps/dir/?api=1&destination=Bukhar-Zhyrau+Street+26+Astana" target="_blank" rel="noopener" data-i="route"></a>
+  </div>
+ </div>
+ <div class="map" style="margin-top:20px"><iframe title="Map" sandbox="allow-scripts allow-same-origin allow-popups" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Bukhar-Zhyrau%20Street%2026%20Astana&z=16&output=embed" loading="lazy"></iframe></div>
+</div></section>
+
+<footer>© 2026 iMarket · Premium reseller since 2021
+ <div style="margin-top:8px"><a href="https://wa.me/77474941621?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%B8%D0%BE%D0%B1%D1%80%D0%B5%D1%81%D1%82%D0%B8%20%D1%81%D0%B0%D0%B9%D1%82" target="_blank" rel="noopener" data-i="buySite" style="color:var(--blue);text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:8px 4px"></a></div></footer>
+<nav class="dock"><a class="btn b-d" href="tel:+77087030101" data-i="call"></a><a class="btn b-wa" href="https://wa.me/77087030101" target="_blank" rel="noopener">WhatsApp</a></nav>
+<dialog id="dlg"></dialog>
+
+<script>
+/* ============ РЕДАКТИРУЕМЫЕ ДАННЫЕ (цены, память, филиалы) ============
+   price: null  -> на сайте покажется «Цена по запросу». Меняйте только числа. */
+const BRANCHES=[
+ {k:'astana',wa:'77087030101'},
+ {k:'oral',wa:'77718450707'},   // из 2GIS (пр. Абая, 88)
+ {k:'atyr',wa:'77078450606'}    // из 2GIS (ул. Кулманова, 105а); второй WhatsApp: 77028562796
+];
+const P=[
+ {id:'i15',img:'4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black',g:'base',n:'iPhone 15',disp:6.1,chip:'A16 Bionic',cam:'48 + 12 MP',hz:60,mat:'al',bat:3349,o:[['128GB',340000,null],['256GB',400000,null],['512GB',null,null]]},
+ {id:'i16',img:'1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-black',g:'base',n:'iPhone 16',disp:6.1,chip:'A18',cam:'48 + 12 MP',hz:60,mat:'al',bat:3561,o:[['128GB',390000,null],['256GB',460000,null],['512GB',null,null]]},
+ {id:'i17',img:'1/as-images.apple.com/is/iphone-compare-iphone-17-202509',g:'base',n:'iPhone 17',disp:6.3,chip:'A19',cam:'48 + 48 MP',hz:120,mat:'al',bat:3692,o:[['256GB',470000,460000],['512GB',null,null]]},
+ {id:'i17p',img:'1/as-images.apple.com/is/iphone-compare-iphone-17-pro-202509',g:'pro',n:'iPhone 17 Pro',disp:6.3,chip:'A19 Pro',cam:'48 MP × 3',hz:120,mat:'al',bat:4252,o:[['256GB',610000,565000],['512GB',710000,670000],['1TB',810000,750000]]},
+ {id:'i17pm',img:'1/as-images.apple.com/is/iphone-compare-iphone-17-pro-202509',g:'pro',n:'iPhone 17 Pro Max',disp:6.9,chip:'A19 Pro',cam:'48 MP × 3',hz:120,mat:'al',bat:5088,o:[['256GB',650000,610000],['512GB',770000,700000],['1TB',855000,785000],['2TB',990000,900000]]},
+ {id:'i18p',img:'1/as-images.apple.com/is/iphone-compare-iphone-18-pro-202609',g:'pro',n:'iPhone 18 Pro',disp:6.3,chip:'A20 Pro',cam:'48 MP Fusion',hz:120,mat:'al',bat:4288,o:[['256GB',670000,650000],['512GB',800000,760000],['1TB',1040000,950000],['2TB',1320000]]},
+ {id:'i18pm',img:'1/as-images.apple.com/is/iphone-compare-iphone-18-pro-202609',g:'pro',n:'iPhone 18 Pro Max',disp:6.9,chip:'A20 Pro',cam:'48 MP Fusion',hz:120,mat:'al',bat:5567,o:[['256GB',770000,745000],['512GB',880000,850000],['1TB',1150000,1100000],['2TB',1430000,1320000]]}
+];
+/* Цены: [память, цена SIM, цена eSIM]. null = «по запросу», -1 = «скоро».
+   Основа: прайс Radjabov Mobile. ADJ сдвигает ВСЕ цены сразу (например -5000 дешевле, 0 как у конкурента). */
+let ADJ=0;
+/* Google Таблица с ценами: вставьте сюда ссылку «Опубликовать в интернете → CSV». Пусто = цены берутся из блока ниже. */
+const SHEET_CSV='https://docs.google.com/spreadsheets/d/e/2PACX-1vSHE-Imq7ZklT3HdLa5MZeKPblEDvHZgaKAxtBRxf2IT9J1uGOvzFo7VEHaeCd_L2A-5B951Rdy_z6t/pub?gid=1991692057&single=true&output=csv';
+/* Trade-In: ПРИМЕРНЫЕ значения-заглушки, замените на свои */
+const TI=[['iPhone 11',100000],['iPhone 12',140000],['iPhone 13',190000],['iPhone 14',240000],['iPhone 15',320000],['iPhone 16',420000]];
+const TIC=[1,.9,.75];
+/* ======================================================================= */
+
+const T={ru:{top:'463+ отзывов в 2GIS',nCat:'Каталог',nCmp:'Сравнение',nTrade:'Trade-In',nBr:'Филиалы',nCont:'Контакты',call:'Позвонить',
+pill:'Оригинал · Гарантия 1 год',h1:'iPhone по самым низким ценам',lead:'Базовые iPhone 15–17, Pro и Pro Max 17 и 18 в наличии. Наличные или рассрочка 0-0-12 и 0-0-24.',btnCat:'Смотреть каталог',btnCmp:'Сравнить модели',
+s1:'463+ отзывов',s2v:'1 год',s2:'гарантия',s3:'рассрочка',s4v:'2 часа',s4:'доставка по Астане',
+brT:'Наши филиалы',brS:'Выберите город и напишите нам',astana:'Астана',oral:'Уральск (Орал)',atyr:'Атырау',main:'Главный магазин',soon:'скоро',
+catT:'Каталог',catS:'Выберите модель и память. Цена обновится сразу.',search:'Поиск, например 17 Pro',fAll:'Все',fBase:'Базовые',fPro:'Pro / Pro Max',fSort:'Сначала дешёвые',
+order:'Заказать',more:'Подробнее',onreq:'Цена по запросу',soonP:'Скоро',buySite:'Хотите приобрести сайт? Пишите',from:'от ',mo:'/мес · 24 мес',empty:'Ничего не нашлось',emptyS:'Спросите наличие в WhatsApp.',ask:'Уточнить наличие',
+cmpT:'Сравнение моделей',cmpS:'Выберите два iPhone и сравните',spDisp:'Дисплей',spChip:'Чип',spCam:'Основная камера',spHz:'Частота экрана',spMat:'Корпус',spBat:'Батарея',spMem:'Память',spPrice:'Цена',al:'Алюминий',upto:'до',h:'ч',
+inT:'Рассрочка 0-0-12 и 0-0-24',inSum:'Сумма покупки, ₸',inTerm:'Срок, мес',inPay:'Платёж в месяц',inBtn:'Рассчитать в WhatsApp',
+trT:'Trade-In: обменяйте старый iPhone',trS:'Оценка за 5 минут в магазине',trModel:'Ваша модель',trBat:'Аккумулятор',trCond:'Состояние',c:['Идеальное','Есть царапины','Трещины / ремонт'],trRes:'Примерная оценка',trNote:'Точную цену назовём после осмотра.',trBtn:'Уточнить цену в WhatsApp',
+coT:'Приходите в магазин',addr:'Адрес',addrV:'ул. Бухар Жырау, 26, Есиль район, Астана',hrs:'Режим работы',hrsV:'Ежедневно, 10:00–20:00',phone:'Телефон / WhatsApp',route:'Построить маршрут',close:'Закрыть',cmpW:'Сравнить'},
+kk:{top:'2GIS-те 463+ пікір',nCat:'Каталог',nCmp:'Салыстыру',nTrade:'Trade-In',nBr:'Филиалдар',nCont:'Байланыс',call:'Қоңырау шалу',
+pill:'Түпнұсқа · 1 жыл кепілдік',h1:'iPhone ең төмен бағамен',lead:'Базалық iPhone 15–17, Pro және Pro Max 17 мен 18 қоймада бар. Қолма-қол немесе 0-0-12, 0-0-24 бөліп төлеу.',btnCat:'Каталогты көру',btnCmp:'Модельдерді салыстыру',
+s1:'463+ пікір',s2v:'1 жыл',s2:'кепілдік',s3:'бөліп төлеу',s4v:'2 сағат',s4:'Астана бойынша жеткізу',
+brT:'Біздің филиалдар',brS:'Қаланы таңдап, бізге жазыңыз',astana:'Астана',oral:'Орал',atyr:'Атырау',main:'Басты дүкен',soon:'жақында',
+catT:'Каталог',catS:'Модель мен жад көлемін таңдаңыз. Баға бірден жаңарады.',search:'Іздеу, мысалы 17 Pro',fAll:'Барлығы',fBase:'Базалық',fPro:'Pro / Pro Max',fSort:'Алдымен арзандары',
+order:'Тапсырыс',more:'Толығырақ',onreq:'Баға сұраныс бойынша',soonP:'Жақында',buySite:'Сайт сатып алғыңыз келе ме? Жазыңыз',from:'бастап ',mo:'/ай · 24 ай',empty:'Ештеңе табылмады',emptyS:'Бар-жоғын WhatsApp-та сұраңыз.',ask:'Нақтылау',
+cmpT:'Модельдерді салыстыру',cmpS:'Екі iPhone таңдап салыстырыңыз',spDisp:'Дисплей',spChip:'Чип',spCam:'Негізгі камера',spHz:'Экран жиілігі',spMat:'Корпус',spBat:'Батарея',spMem:'Жад',spPrice:'Баға',al:'Алюминий',upto:'дейін',h:'сағ',
+inT:'Бөліп төлеу 0-0-12 және 0-0-24',inSum:'Сатып алу сомасы, ₸',inTerm:'Мерзімі, ай',inPay:'Айлық төлем',inBtn:'WhatsApp-та есептеу',
+trT:'Trade-In: ескі iPhone-ды ауыстырыңыз',trS:'Дүкенде 5 минутта бағалаймыз',trModel:'Сіздің модель',trBat:'Аккумулятор',trCond:'Жағдайы',c:['Мінсіз','Сызаттар бар','Жарық / жөндеу'],trRes:'Шамамен баға',trNote:'Нақты баға қарап шыққаннан кейін айтылады.',trBtn:'WhatsApp-та нақтылау',
+coT:'Дүкенге келіңіз',addr:'Мекенжай',addrV:'Бұхар жырау к-сі, 26, Есіл ауданы, Астана',hrs:'Жұмыс уақыты',hrsV:'Күн сайын, 10:00–20:00',phone:'Телефон / WhatsApp',route:'Бағыт салу',close:'Жабу',cmpW:'Салыстыру'}};
+if(window.top!==window.self){try{window.top.location.href=location.href}catch(e){document.documentElement.innerHTML=''}}
+let L='ru';try{L=localStorage.getItem('lang')}catch(e){}
+if(L!=='ru'&&L!=='kk')L='ru';
+const t=k=>T[L][k]??T.ru[k]??k;
+const $=id=>document.getElementById(id);
+const fmt=n=>n.toLocaleString('ru-RU').replace(/\u00a0/g,' ')+' ₸';
+const wa=(n,txt)=>window.open('https://wa.me/'+String(n).replace(/\D/g,'')+'?text='+encodeURIComponent(String(txt).slice(0,500)),'_blank','noopener,noreferrer');
+const sel={};P.forEach(p=>sel[p.id]=0);
+const F={cat:'all',q:'',asc:false,esim:0};let months=12;
+const IMG='https://store.storeimages.cdn-apple.com/';
+const srcs=p=>[p.url,`img/${p.id}.png`,p.img&&IMG+p.img+'?wid=400&hei=512&fmt=png-alpha'].filter(Boolean);
+const pic=p=>`<img class="pimgx" loading="lazy" src="${srcs(p)[0]}" alt="${p.n}" onerror="fb(this,'${p.id}')">`;
+function fb(el,id){const p=P.find(x=>x.id===id),n=(+el.dataset.n||0)+1,l=srcs(p);
+ if(n<l.length){el.dataset.n=n;el.src=l[n];return}
+ el.outerHTML=ph(p)}
+const ph=p=>{const pro=p.g==='pro',c=pro?'#86725f':'#2b2d32',e=pro?'#b19c86':'#4a4d54';
+ const L=(x,y)=>`<circle cx="${x}" cy="${y}" r="7.5" fill="#0a0a0c" stroke="#62656c" stroke-width="2"/><circle cx="${x}" cy="${y}" r="3" fill="#1c2540"/>`;
+ return `<svg class="ph ${p.g}" viewBox="0 0 70 140" role="img" aria-label="${p.n}"><rect x="3" y="2" width="64" height="136" rx="14" fill="${c}" stroke="${e}" stroke-width="2"/>`+
+ (pro?`<rect x="8" y="8" width="36" height="40" rx="10" fill="rgba(255,255,255,.1)"/>${L(19,19)}${L(19,37)}${L(34,28)}<circle cx="52" cy="15" r="2.5" fill="#e9e4c9"/>`
+     :`<rect x="8" y="8" width="32" height="32" rx="10" fill="rgba(255,255,255,.1)"/>${L(19,19)}${L(30,30)}<circle cx="49" cy="15" r="2.5" fill="#e9e4c9"/>`)+
+ `<circle cx="35" cy="86" r="8" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="2"/></svg>`};
+const price=(p,i)=>{const v=p.o[i][F.esim?2:1];return v>0?v+ADJ:v};
+const pTxt=(p,i)=>{const v=price(p,i);return v>0?fmt(v):v===-1?t('soonP'):t('onreq')};
+const iTxt=(p,i)=>price(p,i)>0?t('from')+fmt(Math.round(price(p,i)/24))+t('mo'):'';
+
+function renderBr(){
+ $('brList').innerHTML=BRANCHES.map(b=>{
+  const w=b.wa?`href="https://wa.me/${b.wa}" target="_blank" rel="noopener"`:'';
+  return `<div class="br"><b>${t(b.k)}${b.k==='astana'?`<small>${t('main')}</small>`:''}</b><div>
+   <a class="btn b-wa${b.wa?'':' dis'}" ${w}>WhatsApp</a></div></div>`}).join('');
+}
+function renderGrid(){
+ let list=P.filter(p=>(F.cat==='all'||p.g===F.cat)&&p.n.toLowerCase().includes(F.q));
+ if(F.asc)list=[...list].sort((a,b)=>(price(a,0)>0?price(a,0):1e12)-(price(b,0)>0?price(b,0):1e12));
+ $('empty').style.display=list.length?'none':'block';
+ $('grid').innerHTML=list.map(p=>`<article class="card p"><div>
+  <div class="pimg">${pic(p)}</div><h3>${p.n}</h3><div class="d">${p.disp}" · ${p.chip}</div>
+  <div class="mems">${p.o.map((o,i)=>`<button class="mem${i===sel[p.id]?' on':''}" data-p="${p.id}" data-i="${i}">${o[0]}</button>`).join('')}</div></div>
+  <div class="pfoot"><div class="pr${price(p,sel[p.id])>0?'':' q'}" id="pr-${p.id}">${pTxt(p,sel[p.id])}</div><div class="inst" id="in-${p.id}">${iTxt(p,sel[p.id])}</div>
+  <div class="pb"><button class="btn b-w" data-order="${p.id}">${t('order')}</button><button class="btn b-d" data-more="${p.id}">${t('more')}</button></div></div></article>`).join('');
+}
+function specs(p){return [
+ [t('spDisp'),p.disp+'"',p.disp],[t('spChip'),p.chip],[t('spCam'),p.cam],[t('spHz'),p.hz+' Hz',p.hz],[t('spMat'),t(p.mat)],
+ [t('spBat'),p.bat?p.bat.toLocaleString('ru-RU').replace(/\u00a0/g,' ')+' mAh':'—',p.bat||0],[t('spMem'),p.o.map(o=>o[0]).join(' / ')],
+ [t('spPrice'),pTxt(p,0)]]}
+function renderCmp(){
+ const a=P.find(x=>x.id===$('cA').value),b=P.find(x=>x.id===$('cB').value);
+ $('cmpHead').innerHTML=[a,b].map(p=>`<div>${pic(p)}<div style="margin-top:12px">${p.n}</div></div>`).join('');
+ const sa=specs(a),sb=specs(b);
+ $('cmpTbl').innerHTML=sa.map((r,i)=>{const x=sb[i],w=r[2]!==undefined&&r[2]!==x[2];
+  return `<div class="tr"><span>${r[0]}</span><b class="${w&&r[2]>x[2]?'win':''}">${r[1]}</b><b class="${w&&x[2]>r[2]?'win':''}">${x[1]}</b></div>`}).join('');
+}
+function openMore(id){
+ const p=P.find(x=>x.id===id),i=sel[id];
+ $('dlg').innerHTML=`<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><h3 style="font-size:20px">${p.n}</h3><button class="chip" id="xcl">${t('close')}</button></div>
+ <div style="display:grid;place-items:center;padding:18px 0">${pic(p)}</div>
+ ${specs(p).map(r=>`<div class="sp"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
+ <div class="pb" style="margin-top:16px"><button class="btn b-w" data-order="${p.id}">${t('order')}</button><button class="btn b-d" id="xcmp">${t('cmpW')}</button></div>`;
+ $('dlg').showModal();
+ $('xcl').onclick=()=>$('dlg').close();
+ $('xcmp').onclick=()=>{$('cA').value=p.id;if($('cB').value===p.id)$('cB').value=P.find(x=>x.id!==p.id).id;renderCmp();$('dlg').close();$('compare').scrollIntoView()};
+}
+function orderMsg(p){const o=p.o[sel[p.id]],v=price(p,sel[p.id]);return `iMarket: ${p.n} ${o[0]} ${F.esim?'eSIM':'SIM'}${v>0?' — '+fmt(v):''}`}
+const calcSum=()=>Math.min(Math.max(parseFloat($('calcPrice').value)||0,0),5e6);
+function calc(){$('calcResult').textContent=fmt(Math.round(calcSum()/months))}
+function trade(){
+ const v=TI[$('trM').selectedIndex][1]*parseFloat($('trB').value)*TIC[$('trC').selectedIndex];
+ $('trOut').textContent='≈ '+fmt(Math.round(v/5000)*5000);
+}
+function applyLang(){
+ document.documentElement.lang=L==='kk'?'kk':'ru';
+ document.querySelectorAll('[data-i]').forEach(e=>e.textContent=t(e.dataset.i));
+ document.querySelectorAll('[data-ph]').forEach(e=>e.placeholder=t(e.dataset.ph));
+ document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('on',b.dataset.lang===L));
+ const keep=[$('trC').selectedIndex];
+ $('trC').innerHTML=t('c').map((c,i)=>`<option>${c}</option>`).join('');$('trC').selectedIndex=Math.max(0,keep[0]);
+ renderBr();renderGrid();renderCmp();calc();trade();
+}
+/* init */
+$('cA').innerHTML=$('cB').innerHTML=P.map(p=>`<option value="${p.id}">${p.n}</option>`).join('');
+$('cA').value='i18pm';$('cB').value='i18p';
+$('trM').innerHTML=TI.map(x=>`<option>${x[0]}</option>`).join('');
+document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{L=b.dataset.lang;try{localStorage.setItem('lang',L)}catch(e){}applyLang()});
+$('cA').onchange=$('cB').onchange=renderCmp;
+['trM','trB','trC'].forEach(id=>$(id).onchange=trade);
+$('calcPrice').oninput=calc;
+$('askInst').onclick=()=>wa('77087030101',`Рассрочка: ${calcSum()} ₸ / ${months} мес.`);
+$('trForm').onsubmit=e=>{e.preventDefault();wa('77087030101',`Trade-In: ${$('trM').value}, АКБ ${$('trB').selectedOptions[0].text}, ${$('trC').value}. ${$('trOut').textContent}`)};
+$('months').onclick=e=>{const b=e.target.closest('.mem');if(!b)return;months=+b.dataset.m;document.querySelectorAll('#months .mem').forEach(x=>x.classList.toggle('on',x===b));calc()};
+$('q').oninput=e=>{F.q=e.target.value.trim().toLowerCase();renderGrid()};
+$('tabs').onclick=e=>{const c=e.target.closest('.chip');if(!c)return;
+ if(c.dataset.sim!==undefined){F.esim=+c.dataset.sim;document.querySelectorAll('#tabs [data-sim]').forEach(x=>x.classList.toggle('on',x===c));renderCmp()}
+ else if(c.id==='sort'){F.asc=!F.asc;c.classList.toggle('on',F.asc)}else{F.cat=c.dataset.cat;document.querySelectorAll('#tabs [data-cat]').forEach(x=>x.classList.toggle('on',x===c))}renderGrid()};
+document.addEventListener('click',e=>{
+ const m=e.target.closest('.mem[data-p]');
+ if(m){sel[m.dataset.p]=+m.dataset.i;const p=P.find(x=>x.id===m.dataset.p),i=sel[p.id];
+  m.parentElement.querySelectorAll('.mem').forEach(b=>b.classList.toggle('on',b===m));
+  const pr=$('pr-'+p.id);pr.textContent=pTxt(p,i);pr.classList.toggle('q',!(price(p,i)>0));$('in-'+p.id).textContent=iTxt(p,i);return}
+ const o=e.target.closest('[data-order]');if(o){wa('77087030101',orderMsg(P.find(x=>x.id===o.dataset.order)));return}
+ const mo=e.target.closest('[data-more]');if(mo)openMore(mo.dataset.more);
+ if(e.target===$('dlg'))$('dlg').close();
+});
+applyLang();
+
+/* ---- цены из Google Таблицы ---- */
+function parseCSV(t){const rows=[];let r=[],c='',q=false;
+ for(let i=0;i<t.length;i++){const ch=t[i];
+  if(q){if(ch==='"'){if(t[i+1]==='"'){c+='"';i++}else q=false}else c+=ch}
+  else if(ch==='"')q=true;else if(ch===','){r.push(c);c=''}
+  else if(ch==='\n'){r.push(c);rows.push(r);r=[];c=''}else if(ch!=='\r')c+=ch}
+ if(c||r.length){r.push(c);rows.push(r)}return rows}
+const normM=x=>String(x).toUpperCase().replace(/\s/g,'').replace('ТБ','TB').replace('ГБ','GB');
+function cell(v){v=String(v||'').trim().toLowerCase();if(!v)return null;
+ if(['скоро','soon','жақында'].includes(v))return -1;
+ const n=parseInt(v.replace(/[^\d-]/g,''),10);
+ return(!isNaN(n)&&n>=50000&&n<=3000000)?n:null}  /* цена вне 50 000–3 000 000 ₸ игнорируется */
+async function loadSheet(){
+ if(!/^https:\/\/docs\.google\.com\//.test(SHEET_CSV))return;
+ try{
+  const r=await fetch(SHEET_CSV,{cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'});if(!r.ok)return;
+  const rows=parseCSV(await r.text()).slice(1);let hit=0;
+  rows.forEach(x=>{
+   const name=(x[0]||'').trim().toLowerCase();
+   if(name==='adj'){const a=parseInt(String(x[2]).replace(/[^\d-]/g,''),10);ADJ=(!isNaN(a)&&Math.abs(a)<=100000)?a:0;hit++;return}
+   const p=P.find(m=>m.n.toLowerCase()===name);if(!p)return;
+   const o=p.o.find(m=>normM(m[0])===normM(x[1]));if(!o)return;
+   o[1]=cell(x[2]);o[2]=cell(x[3]);hit++});
+  if(hit){renderGrid();renderCmp()}
+ }catch(e){/* таблица недоступна: остаются цены из кода */}
+}
+loadSheet();
+</script>
+</body>
+</html>
