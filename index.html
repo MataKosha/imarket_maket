@@ -76,7 +76,7 @@ header{position:sticky;top:0;z-index:40;background:rgba(14,14,16,.82);backdrop-f
 .filters::-webkit-scrollbar{display:none}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}
 .p{padding:12px;display:flex;flex-direction:column;justify-content:space-between;min-width:0}
-.pimg{background:#18181a;border-radius:14px;height:138px;display:grid;place-items:center}
+.pimg{background:#18181a;border-radius:14px;aspect-ratio:1.07/1;display:grid;place-items:center}
 .pimg img{height:112px;width:auto;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,0,0,.6))}
 .p h3{font-size:15px;margin-top:12px;line-height:1.2}.p .d{font-size:12px;color:var(--mut);margin-top:3px}
 .mems{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
@@ -166,8 +166,8 @@ dialog::backdrop{background:rgba(0,0,0,.65)}
 .pimg .pw{width:100%;height:100%}
 .pw .pimgx,.pimg .pw .pimgx{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;filter:none}
 @media(min-width:900px){.pw .pimgx,.pimg .pw .pimgx{transform:scale(var(--z,1))}}
-.ch .pw{width:100%;height:170px}
-dialog .pw{width:100%;height:240px}
+.ch .pw{width:100%;max-width:320px;margin:0 auto;aspect-ratio:1.07/1}
+dialog .pw{width:100%;max-width:320px;margin:0 auto;aspect-ratio:1.07/1}
 @media(min-width:900px){dialog{margin:auto;border-radius:24px}.pb{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -251,7 +251,7 @@ dialog .pw{width:100%;height:240px}
  <div class="map" style="margin-top:20px"><iframe title="Map" sandbox="allow-scripts allow-same-origin allow-popups" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Bukhar-Zhyrau%20Street%2026%20Astana&z=16&output=embed" loading="lazy"></iframe></div>
 </div></section>
 
-<footer>© 2026 iMarket · Premium reseller since 2021 · v8
+<footer>© 2026 iMarket · Premium reseller since 2021 · v10
  <div style="margin-top:8px"><a href="https://wa.me/77474941621?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%B8%D0%BE%D0%B1%D1%80%D0%B5%D1%81%D1%82%D0%B8%20%D1%81%D0%B0%D0%B9%D1%82" target="_blank" rel="noopener" data-i="buySite" style="color:var(--blue);text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:8px 4px"></a></div></footer>
 <nav class="dock"><a class="btn b-d" href="tel:+77087030101" data-i="call"></a><a class="btn b-wa" href="https://wa.me/77087030101" target="_blank" rel="noopener">WhatsApp</a></nav>
 <dialog id="dlg"></dialog>
@@ -265,7 +265,7 @@ const BRANCHES=[
  {k:'atyr',wa:'77078450606'}    // из 2GIS (ул. Кулманова, 105а); второй WhatsApp: 77028562796
 ];
 const P=[
- {id:'i15',z:1.35,img:'4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black',g:'base',n:'iPhone 15',disp:6.1,chip:'A16 Bionic',cam:'48 + 12 MP',hz:60,mat:'al',bat:3349,o:[['128GB',340000,null],['256GB',400000,null],['512GB',null,null]]},
+ {id:'i15',img:'4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black',g:'base',n:'iPhone 15',disp:6.1,chip:'A16 Bionic',cam:'48 + 12 MP',hz:60,mat:'al',bat:3349,o:[['128GB',340000,null],['256GB',400000,null],['512GB',null,null]]},
  {id:'i16',img:'1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-black',g:'base',n:'iPhone 16',disp:6.1,chip:'A18',cam:'48 + 12 MP',hz:60,mat:'al',bat:3561,o:[['128GB',390000,null],['256GB',460000,null],['512GB',null,null]]},
  {id:'i17',img:'1/as-images.apple.com/is/iphone-compare-iphone-17-202509',g:'base',n:'iPhone 17',disp:6.3,chip:'A19',cam:'48 + 48 MP',hz:120,mat:'al',bat:3692,o:[['256GB',470000,460000],['512GB',null,null]]},
  {id:'i17p',img:'1/as-images.apple.com/is/iphone-compare-iphone-17-pro-202509',g:'pro',n:'iPhone 17 Pro',disp:6.3,chip:'A19 Pro',cam:'48 MP × 3',hz:120,mat:'al',bat:4252,o:[['256GB',610000,565000],['512GB',710000,670000],['1TB',810000,750000]]},
@@ -424,15 +424,16 @@ function dbg(m){console.info('[прайс] '+m);if(!/[?&]debug/.test(location.se
 async function loadSheet(){
  if(!/^https:\/\/docs\.google\.com\//.test(SHEET_CSV)){dbg('SHEET_CSV пустой или не начинается с https://docs.google.com/ — берутся цены из кода');return}
  try{
-  const r=await fetch(SHEET_CSV,{cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'});if(!r.ok){dbg('Таблица не загрузилась, код ответа '+r.status+'. Проверьте публикацию.');return}
-  const rows=parseCSV(await r.text()).slice(1);let hit=0;const bad=[];
+  const r=await fetch(SHEET_CSV+(SHEET_CSV.includes('?')?'&':'?')+'_='+Date.now(),{cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'});if(!r.ok){dbg('Таблица не загрузилась, код ответа '+r.status+'. Проверьте публикацию.');return}
+  const rows=parseCSV(await r.text()).slice(1);let hit=0;const bad=[],miss=[];let smp='';
   rows.forEach(x=>{
    const name=(x[0]||'').trim().toLowerCase();
    if(name==='adj'){const a=parseInt(String(x[2]).replace(/[^\d-]/g,''),10);ADJ=(!isNaN(a)&&Math.abs(a)<=100000)?a:0;hit++;return}
-   const p=P.find(m=>m.n.toLowerCase()===name);if(!p)return;
-   const o=p.o.find(m=>normM(m[0])===normM(x[1]));if(!o)return;
+   const p=P.find(m=>m.n.toLowerCase()===name);if(!p){if(name)miss.push(x[0]);return}
+   const o=p.o.find(m=>normM(m[0])===normM(x[1]));if(!o){miss.push(x[0]+' '+x[1]);return}
+   if(!smp)smp=p.n+' '+o[0]+': SIM «'+String(x[2]).trim()+'»';
    [[1,2],[2,3]].forEach(([k,c])=>{const v=cell(x[c]);if(v===undefined)bad.push(p.n+' '+o[0]+': «'+String(x[c]).trim()+'»');else o[k]=v});hit++});
-  dbg(hit?'Таблица загружена, обновлено строк: '+hit+(bad.length?'. НЕ ПРИНЯТЫ цены (нужно число от 50000 до 3000000): '+bad.join('; '):''):'Таблица прочитана, но модели и память не совпали с названиями из шаблона');
+  dbg(hit?'Таблица загружена, обновлено строк: '+hit+(miss.length?'. НЕ НАЙДЕНЫ строки: '+miss.join('; '):'')+(smp?'. Первая строка: '+smp:'')+(bad.length?'. НЕ ПРИНЯТЫ цены (нужно число от 50000 до 3000000): '+bad.join('; '):''):'Таблица прочитана, но модели и память не совпали с названиями из шаблона');
   if(hit){renderGrid();renderCmp()}
  }catch(e){dbg('Ошибка чтения таблицы. Нужен формат CSV и публикация в интернете.')}
 }
